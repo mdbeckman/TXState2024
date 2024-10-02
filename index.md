@@ -10,7 +10,7 @@ output:
     css: stylesheet.css
 ---
 
-## Progress toward NLP-assisted formative assessment feedback
+## Progress toward NLP-assisted formative assessment feedback in large classes
 
 *Abstract.* This talk seeks to articulate the benefit of free-response tasks and timely formative assessment feedback, a roadmap for developing human-in-the-loop natural language processing (NLP) assisted feedback, and results from a pilot study establishing proof of principle. If we are to pursue Statistics and Data Science Education across disciplines, we will surely encounter both opportunity and necessity to develop scalable solutions for pedagogical best practices. Research suggests "write-to-learn" tasks improve learning outcomes, yet constructed-response methods of formative assessment become unwieldy when class sizes grow large. In the pilot study, several short-answer tasks completed by nearly 2000 introductory tertiary statistics students were evaluated by human raters and an NLP algorithm. After briefly describing the tasks, the student contexts, the algorithm and the raters, this talk discusses the results which indicate substantial inter-rater agreement and group consensus. The talk will conclude with recent developments building upon this pilot, as well as implications for teaching and future research. 
  
