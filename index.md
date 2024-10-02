@@ -29,12 +29,13 @@ output:
 
 
 
-## Contact
+## Contact & Short Bio
 
-Matthew Beckman  
-Assoc Research Professor | Penn State University  
-Director | CAUSE  
+![](directory-beckman-small.jpg)
 
-email: mdb268 [at] psu [dot] edu  
-personal webpage: <https://mdbeckman.github.io/>  
-CAUSE webpage: <https://www.causeweb.org>
+
+- email: mdb268 [at] psu [dot] edu  
+- personal webpage: <https://mdbeckman.github.io/>  
+- CAUSE webpage: <https://www.causeweb.org>
+
+Matt Beckman is an Associate Research Professor of Statistics at Penn State University and Director of the Consortium for the Advancement of Undergraduate Statistics Education (CAUSE).  He is co-founder of a Statistics & Data Science Education Research Lab at Penn State, and his primary research interests tend to focus on assessment. Matt is currently PI for the NSF-funded “Project CLASSIFIES” which investigates the use of NLP tools to assist instructors of large-enrollment classes with providing formative assessment feedback on short-answer, free response tasks.  
