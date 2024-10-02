@@ -192,14 +192,17 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 - Week 10: experience + expert rubric (with exemplars)
 
 | Comparison        |  Day 1      | Day 5        | Week 10     |  
-|:------------------|-------------|-------------:|------------:|
+|:------------------|------------:|-------------:|------------:|
 | Rater A & Rater E |  QWK = 0.46 |  QWK = 0.57* |  QWK = 0.58 | 
 | Rater A & Rater F |  QWK = 0.61 |  QWK = 0.72* |  QWK = 0.78 |
 | Rater A & Rater G |  QWK = 0.63 |  QWK = 0.73* |  QWK = 0.73 |
 | Rater A & Rater H |  QWK = 0.72 |  QWK = 0.71  |  QWK = 0.68 |
 
+
 <!-- All LA's; "H" only statistics major (& quite senior) -->
-<!-- * indicates outside Day 5 95& CI -->
+<!-- * indicates outside 95& CI for Day 5 -->
+
+<!-- needs: baseline level of correct?  compare A & A; compare A & SFRN; compare each with self? -->
 
 \footnotesize
 
