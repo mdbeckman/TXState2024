@@ -4,10 +4,10 @@ author: |
   | Matthew Beckman
   | Penn State University
 date: | 
-  | August 8, 2024
+  | October 25, 2024
   | 
   | 
-  | Slides: mdbeckman.github.io/JSM2024/
+  | Slides: mdbeckman.github.io/TXState2024/
 
   
 output:
