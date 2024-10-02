@@ -35,15 +35,26 @@ library(tidyverse)
 
 - "short-answer" tasks are good for students, but hard to scale  
 - Can NLP tools help instructors give students feedback?  
-    - Mark & group student responses first   
-    - Need some basis for comparison  
-    - What might scalable, personalized feedback look like anyway?  
+    - Evaluate & group student responses    
+    - Compare agreement between NLP & humans  
+    - What might scalable, personalized feedback look like anyway?   
 
->- Results
->    - Marking by our NLP algorithm agrees with humans ($\text{QWK} \approx 0.7+$)  
->    - As well as humans agree ($\text{QWK} \approx 0.7 \text{ to } 0.8+$)  
->    - Human-Algorithm partnership may be even better ($\approx 0.85+$)  
->    - More work to be done with grouping & feedback  
+
+
+# Spoilers!
+
+- "short-answer" tasks are good for students, but hard to scale  
+- Can NLP tools help instructors give students feedback?  
+    - Evaluate & group student responses    
+    - Compare agreement between NLP & humans  
+    - What might scalable, personalized feedback look like anyway?   
+
+- Results
+    - Instructor agreement ($\text{QWK} \approx 0.7 \text{ to } 0.8+$)  
+    - UTA agreement ($\text{QWK} \approx 0.6 \text{ to } 0.7+$)  
+    - NLP algorithm agreement with instructors ($\text{QWK} \approx 0.7+$)  
+    - Human-Algorithm partnership may be even better ($\approx 0.85+$)  
+    - Pursuing multiple avenues for grouping & feedback  
 
 
 # Motivation
@@ -63,8 +74,6 @@ library(tidyverse)
 # Erm... 
 
 ![](large-class.jpg){ width=95% }
-
-<!-- # Policy Report (May 2023) -->
 
 
 
@@ -129,7 +138,7 @@ Study utilized de-identified extant data & scoring rubrics (Beckman, 2015)
 - 29 class sections 15 distinct institutions
 
 
-Note: this sample is *not* a single large class at some institution; the available data includes introductory statistics students from many class sections at many institutions--some classes were quite small.  
+Note: this sample was *not* a single large class at one institution; these data include introductory statistics students from many class sections at many institutions--some large, others small.  
 
 ![image created with assistance of DALL·E 2 by Open AI](DALLE exam.png){ width=25% }
 
@@ -146,9 +155,9 @@ Note: this sample is *not* a single large class at some institution; the availab
 - responses judged Correct / Partial / Incorrect against rubric
 <!-- - constraint: *intra-rater* analysis for person that had labeled 178 responses ~7 years prior -->
 
-### May 2024 Follow Up Investigation
+### Summer 2024 Team
 
-- 4 Undergraduate Teaching Assistants join team
+- 4 Undergraduate Teaching Assistants (UTA's) join team
 - UTA's are important part of large-enrollment teaching team
 - (4 tasks) x (63 students) scored by each UTA 
 
@@ -174,18 +183,23 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 
 [^1]: Viera & Garrett (2005) 
 
-# Preliminary Results: May 2024 UTA's
+# Preliminary Results: Summer 2024 UTA's
 
 - pairwise agreement with "instructor" (rater A)
-- consensus among the 5 raters
+- Results from beginning and end of 10 week program
+- Day 1: UTA's provided expert solution & group discussion
+- Day 5: UTA's provided expert rubric (with exemplars)
+- Week 10: experience + expert rubric (with exemplars)
 
-| Comparison     | Reliability | 
-|:---------------|------------:|
-| Rater A & Rater E |  QWK = 0.57 |
-| Rater A & Rater F |  QWK = 0.72 |
-| Rater A & Rater G |  QWK = 0.73 |
-| Rater A & Rater H |  QWK = 0.71 |
-<!-- | Raters A, E, F, G, & H |  FK = 0.54 | -->
+| Comparison        |  Day 1      | Day 5        | Week 10     |  
+|:------------------|-------------|-------------:|------------:|
+| Rater A & Rater E |  QWK = 0.46 |  QWK = 0.57* |  QWK = 0.58 | 
+| Rater A & Rater F |  QWK = 0.61 |  QWK = 0.72* |  QWK = 0.78 |
+| Rater A & Rater G |  QWK = 0.63 |  QWK = 0.73* |  QWK = 0.73 |
+| Rater A & Rater H |  QWK = 0.72 |  QWK = 0.71  |  QWK = 0.68 |
+
+<!-- All LA's; "H" only statistics major (& quite senior) -->
+<!-- * indicates outside Day 5 95& CI -->
 
 \footnotesize
 
@@ -194,19 +208,50 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 
 # Methods (RQ2)
 
-The set of task-responses were randomly split four ways:  
+**RQ2**: What level of agreement is achieved between human raters and an NLP algorithm?  
 
-- 90% of data for development purposes (training)
-    - training (72%), 
-    - development (9%) 
-    - evaluation (9%)
-- 10% of data held in reserve (test)
+
+![](Collaborators.png){width=95%}
+
+
+### Paper introducing SFRN
+
+\footnotesize
+
+Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transformation Relation Network for Automatic Short Answer Grading. In *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing*, pp. 6030–6040. Association for Computational Linguistics. <https://aclanthology.org/2021.emnlp-main.487>
+
+# Meet the "machine"
+
+![SFRN schematic: encoder (Left); fusion function (Middle); classifier (Right)](SFRN.png){width=70%}
+
+Semantic Feature-Wide Transformation Relation Network (SFRN):
+
+- architecture inspired by work from computer vision
+- end-to-end model with three components: 
+    - pretrained BERT encoder (LLM) >> vector representations 
+    - learned feature-wise transformation function fuses multiple representations, if necessary (e.g., multiple reference answers)
+- relation networks designed to learn generalizations that infer meaning in a data-efficient way
+- data augmentation during training step 
+
+<!-- (akin to computer vision) -->
+
+
+
+<!-- The set of task-responses were randomly split four ways:   -->
+
+<!-- - 90% of data for development purposes (training) -->
+<!--     - training (72%),  -->
+<!--     - development (9%)  -->
+<!--     - evaluation (9%) -->
+<!-- - 10% of data held in reserve (test) -->
+
+
 
 
 # Results (RQ2)
 
 
-**RQ2**: What level of agreement is achieved between human raters and the machine (an NLP algorithm)?
+**RQ2**: What level of agreement is achieved between instructors and the machine (an NLP algorithm)?
 
 
 | Comparison     | Reliability | 
@@ -236,7 +281,7 @@ Want to evaluate accuracy of marking algorithm when designed to "defer" to human
 
 # Human-Machine Partnership Results
 
-> Our work is first (that we know of) to impelement controllable, selective prediction deferral policy for the classifier (i.e., marking) step
+> Our work is first that we know of to impelement controllable, selective prediction deferral policy for the classifier (i.e., scoring) step
 
 | Threshold     | Deferral Rate  |  Simulated HIL Accuracy | 
 |:-------------:|:--------------:|:------------------:|
@@ -244,8 +289,9 @@ Want to evaluate accuracy of marking algorithm when designed to "defer" to human
 | 0.75          |  0.132         | 0.861            |
 | 0.80          |  0.160         | 0.871            |
 | 0.85          |  0.202         | 0.884            |
-| **0.90**      |  **0.256**     | **0.899**        |
-| 0.95          |  0.418         | 0.931            |
+| 0.90          |  0.256         | 0.899            |
+
+<!-- | 0.95          |  0.418         | 0.931            | -->
 
 
 
@@ -278,7 +324,7 @@ How similar is feedback provided by trained humans?
 
 - Reviewer 1 favored feedback on statistical concepts (only). 
 - Reviewer 2 provided same, plus a quote from the student 
-- Reviewer 2 parsed her feedback to compare her remarks related to the statistical concepts (only) with the feedback of Reviewer 1.
+- Reviewer 2 parsed feedback to compare remarks related to the statistical concepts (only) with that of Reviewer 1.
 
 # Results (RQ3 humans)
 
@@ -300,6 +346,12 @@ How similar is feedback provided by trained humans?
 
 
 
+# Discussion
+
+![](US-DOE-AI4Ed.png){width=80%}
+
+![](US-DOE-recommendations.png){width=80%}
+
 
 # Discussion
 
@@ -308,34 +360,50 @@ How similar is feedback provided by trained humans?
 - **RQ2**: NLP algorithm produced agreement reasonably aligned to results achieved by pairs/groups of trained human raters
     - Human-in-the-Loop >> Instructor / Algorithm partnership
 
+
 - **RQ3**: Promising results based on "man-made clusters" but classification and clustering have competing incentives when it comes to dimensionality of NLP vector representations
     - Lower Dim is generally better for cluster stability   
     - Higher Dim better for classification reliability  
     - Exploring Topological Analysis as alternative to clustering
     - Feedback as a classifier (Li et al., 2023)
 
+<!-- 2023 AI Ed Report-->
 
 
 <!-- ![](HIL-deferral.png) -->
 
 
-# Current Events: Ongoing Data Collection
+# Current Events
 
 - challenge system with diverse tasks, institutions, student populations; 
-    - several large intro statistics classes in U.S. (ISU, MSU, PSU, UCSB, UF, UTEP)
+    - partnering with ISU, MSU, PSU, UCSB, UF, & UTEP
     - two "consensus" tasks implemented by all
     - 2-3 local tasks at each institution 
+    - (so far) approx 22,300 responses from ~ 13,000 students
 - accumulated data to be shared with broader NLP community
-    - this data set would be among the largest open data sources of it's kind
+    - this will be among the largest *open* data sources of it's kind
     - addresses barriers imposed by proprietary data sources on NLP research
+- shiny new algorithm: AsRRN
+    - contrastive loss function 
+    - correct answers are similar; there are a few distinct ways to earn partial credit; there are many diffuse ways to be incorrect
+    - accommodates more complex task structure 
 
-<!-- - approx XX,XXX responses from 13,000 students -->
+<!-- - After consent; approx 22,300 responses from ~ 13,000 students -->
+<!-- ISU = 468 + 362 + 249 + 205 =  1280   -->
+<!-- MSU = 2170 + 1141 = 3309  -->
+<!-- PSU = 1191 + 1173 + 1187 + 1188 = 4735 -->
+<!-- UF = 1300 + 1521 = 1819   -->
+<!-- UTEP = 55 + 49 = 102    -->
+<!-- Consensus = 2419 + 1872 + 1175 + 2725 + 1072 = 9263 -->
+<!-- ISTUDIO = 6 * 299 = 1794 -->
+
+
 
 
 # Acknowledgment
 
-- We're grateful to the US National Science Foundation for funding this research
-- Project CLASSIFIES (NSF DUE-2236150)
+- We're grateful to the US National Science Foundation for funding this research; Project CLASSIFIES (NSF DUE-2236150).  
+- Thanks to students and faculty at partner institutions that have assisted us with data collection.
 
 
 
