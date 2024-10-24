@@ -112,24 +112,27 @@ library(tidyverse)
 
 \vskip 18pt
 
-### Pilot Study
+### Pilot Study & Follow-Up Investigation
 
-\footnotesize
+\tiny
 
-Lloyd, S. E., Beckman, M., Pearl, D., Passonneau, R., Li, Z., & Wang, Z. (2022). Foundations for AI-Assisted Formative Assessment Feedback for Short-Answer Tasks in Large-Enrollment Classes. In *Proceedings of the eleventh international conference on teaching statistics*. Rosario, Argentina.
+- Lloyd, S. E., Beckman, M., Pearl, D., Passonneau, R., Li, Z., & Wang, Z. (2022). Foundations for AI-Assisted Formative Assessment Feedback for Short-Answer Tasks in Large-Enrollment Classes. In *Proceedings of the eleventh international conference on teaching statistics*. Rosario, Argentina.
 
+\vskip 6pt
 
+- Beckman, M., Burke, S., Fiochetta, J., Fry, B., Lloyd, S. E., Patterson, L., & Tang, E. (2024). Developing Consistency Among Undergraduate Graders Scoring Open-Ended Statistics Tasks. Preprint URL: <https://arxiv.org/abs/2410.18062>
 
 
 # Collaborators 
 
-![](Collaborators.png){width=95%}
+![Lloyd et al., (2022) Pilot Project Team](Collaborators.png){width=75%}
+
+![Beckman et al., (2024) Project Team](SU24_Team.png){width=80%}
 
 
 
 
-
-# Methods (Sample)
+# Methods (Data Set)
 
 Study utilized de-identified extant data & scoring rubrics (Beckman, 2015)
 
@@ -147,24 +150,22 @@ Note: this sample was *not* a single large class at one institution; these data 
 
 ![Sample task including a stem and two short-answer prompts.](istudio_example.png){width=90%}
 
-# Methods (RQ1)
+# Methods (Rater Agreement)
 
-- 3 raters typical of large-enrollment instruction team
-- (6 tasks) x (1,935 students) distributed among the team
-- sufficient intersection to assess inter-rater agreement 
-- responses judged Correct / Partial / Incorrect against rubric
 <!-- - constraint: *intra-rater* analysis for person that had labeled 178 responses ~7 years prior -->
 
-### Summer 2024 Team
+- Lloyd et al., (2022)
+    - 3 raters typical of large-enrollment instruction team
+    - (6 tasks) x (1,935 students) distributed among the team
+    - sufficient intersection to assess inter-rater agreement 
+    - responses judged Correct / Partial / Incorrect against rubric
+- Beckman at al., (2024)
+    - 4 Undergraduate Teaching Assistants (UTAs) and 1 instructor
+    - (4 tasks) x (63 students) scored by each UTA + Instructor
+    - 5 sequential exercises associated with progression of scoring development
 
-- 4 Undergraduate Teaching Assistants (UTA's) join team
-- UTA's are important part of large-enrollment teaching team
-- (4 tasks) x (63 students) scored by each UTA 
 
-
-![](SU24_Team.png){width=100%}
-
-# Results (RQ1)
+# Results: Instructors as Graders
 
 **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?
 
@@ -173,9 +174,8 @@ Note: this sample was *not* a single large class at one institution; these data 
 | Rater A & Rater C |  QWK = 0.83 |
 | Rater A & Rater D |  QWK = 0.80 |
 | Rater C & Rater D |  QWK = 0.79 |
-<!-- | Raters A, C, & D |  FK = 0.70 | -->
-
-<!-- | Rater A: 2015 & 2021 |  QWK = 0.88 | -->
+| Raters A, C, & D  |  FK = 0.70  |
+| Rater A: 2015 & 2021 |  QWK = 0.88 |
 
 \footnotesize
 
@@ -183,13 +183,10 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 
 [^1]: Viera & Garrett (2005) 
 
-# Preliminary Results: Summer 2024 UTA's
+# Results: Instructor & UTA
 
-- pairwise agreement with "instructor" (rater A)
-- Results from beginning and end of 10 week program
-- Day 1: UTA's provided expert solution & group discussion
-- Day 5: UTA's provided expert rubric (with exemplars)
-- Week 10: experience + expert rubric (with exemplars)
+<!-- ![](TS2024_interraterQWK.png) -->
+
 
 | Comparison        |  Day 1      | Day 5        | Week 10     |  
 |:------------------|------------:|-------------:|------------:|
@@ -202,11 +199,16 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 <!-- All LA's; "H" only statistics major (& quite senior) -->
 <!-- * indicates outside 95& CI for Day 5 -->
 
-<!-- needs: baseline level of correct?  compare A & A; compare A & SFRN; compare each with self? -->
-
 \footnotesize
 
 Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
+
+# Results: Instructor & UTA
+
+![Intra-rater agreement (self-consistency) for each participant as measured with Quadratic Weighted Kappa (QWK) while scoring the same set of student responses on two occasions approximately 10 weeks apart.](TS2024_intraraterQWK.png){ width=30% }
+
+![Group agreement among four undergraduate TAs and one instructor, as measured with Gwet’s (2014) AC2; 95% confidence intervals accompany each estimate.](TS2024_consensusGwet.png){ width=100% }
+
 
 
 # Methods (RQ2)
@@ -219,7 +221,7 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 
 ### Paper introducing SFRN
 
-\footnotesize
+\tiny
 
 Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transformation Relation Network for Automatic Short Answer Grading. In *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing*, pp. 6030–6040. Association for Computational Linguistics. <https://aclanthology.org/2021.emnlp-main.487>
 
@@ -420,6 +422,8 @@ How similar is feedback provided by trained humans?
 
 #. Beckman, M. (2015). Assessment Of Cognitive Transfer Outcomes For Students Of Introductory Statistics. <http://conservancy.umn.edu/handle/11299/175709>
 
+#. Beckman, M., Burke, S., Fiochetta, J., Fry, B., Lloyd, S. E., Patterson, L., & Tang, E. (2024). Developing Consistency Among Undergraduate Graders Scoring Open-Ended Statistics Tasks. Preprint URL: <https://arxiv.org/abs/2410.18062>
+
 #. Black, P., & Wiliam, D. (2009). Developing the theory of formative assessment.  *Educational Assessment, Evaluation and Accountability, 21,* pp 5-31. <https://doi.org/10.1007/s11092-008-9068-5> 
 
 #. GAISE College Report ASA Revision Committee (2016). Guidelines for Assessment and Instruction in Statistics Education College Report 2016. URL: <http://www.amstat.org/education/gaise>
@@ -437,15 +441,18 @@ How similar is feedback provided by trained humans?
 
 #. Graham, S., Kiuhara, S. A., & MacKay, M. (2020). The Effects of Writing on Learning in Science, Social Studies, and Mathematics: A Meta-Analysis. *Review of Educational Research, 90*(2), 179–226.
 
+#. Gwet, K. (2014). Handbook of Inter-Rater Reliability: The Definitive Guide to Measuring the Extent of Agreement Among Raters
+
 #. Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transformation Relation Network for Automatic Short Answer Grading. In *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing*, pp. 6030–6040. Association for Computational Linguistics. <https://aclanthology.org/2021.emnlp-main.487>
 
-#. Li, Z., Lloyd, S., Beckman, M. D., & Passonneau, R. J. (2023). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping.  *Findings of the Association for Computational Linguistics: EMNLP 2023*. <https://doi.org/10.18653/v1/2023.findings-emnlp.254>
 
 # References (3/3)
 
 \small
 
-10. Page, E. B. (1994). Computer Grading of Student Prose, Using Modern Concepts and Software. *The Journal of Experimental Education, 62*(2), 127–142.
+#. Li, Z., Lloyd, S., Beckman, M. D., & Passonneau, R. J. (2023). Answer-state Recurrent Relational Network (AsRRN) for Constructed Response Assessment and Feedback Grouping.  *Findings of the Association for Computational Linguistics: EMNLP 2023*. <https://doi.org/10.18653/v1/2023.findings-emnlp.254>
+
+#. Page, E. B. (1994). Computer Grading of Student Prose, Using Modern Concepts and Software. *The Journal of Experimental Education, 62*(2), 127–142.
 
 #. Pearl, D. K., Garfield, J. B., delMas, R., Groth, R. E., Kaplan, J. J., McGowan, H., & Lee, H. S. (2012). Connecting Research to Practice in a Culture of Assessment for Introductory College-level Statistics. URL: <http://www.causeweb.org/research/guidelines/ResearchReport_Dec_2012.pdf>
 
