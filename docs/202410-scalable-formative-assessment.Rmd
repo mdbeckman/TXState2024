@@ -5,9 +5,7 @@ author: |
   | Penn State University
 date: | 
   | October 25, 2024
-  | 
-  | 
-  | Slides: mdbeckman.github.io/TXState2024/
+
 
   
 output:
@@ -27,34 +25,22 @@ library(tidyverse)
 ```
 
 
+---
+
+\titlepage
+
+#### Two question survey before seminar 
+
+![(QR Code) https://forms.gle/hpW72fMYE1SsB19JA](QR-GForm.png){width=20%}
 
 
+# Responses to our survey?
 
 
-# Overview
+```{r, echo=FALSE,out.width="49%", out.height="49%", fig.cap="caption", fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("OddForm.png","EvenForm.png"))
+``` 
 
-- "short-answer" tasks are good for students, but hard to scale  
-- Can NLP tools help instructors give students feedback?  
-    - Evaluate & group student responses    
-    - Compare agreement between NLP & humans  
-    - What might scalable, personalized feedback look like anyway?   
-
-
-
-# Spoilers!
-
-- "short-answer" tasks are good for students, but hard to scale  
-- Can NLP tools help instructors give students feedback?  
-    - Evaluate & group student responses    
-    - Compare agreement between NLP & humans  
-    - What might scalable, personalized feedback look like anyway?   
-
-- Results
-    - Instructor agreement ($\text{QWK} \approx 0.7 \text{ to } 0.8+$)  
-    - UTA agreement ($\text{QWK} \approx 0.6 \text{ to } 0.7+$)  
-    - NLP algorithm agreement with instructors ($\text{QWK} \approx 0.7+$)  
-    - Human-Algorithm partnership may be even better ($\approx 0.85+$)  
-    - Pursuing multiple avenues for grouping & feedback  
 
 
 # Motivation
@@ -129,6 +115,22 @@ library(tidyverse)
 
 ![Beckman et al., (2024) Project Team](SU24_Team.png){width=80%}
 
+
+# Attention Check...
+
+- "short-answer" tasks are good for students, but hard to scale  
+- Can NLP tools help instructors give students feedback?  
+    - Evaluate & group student responses    
+    - Compare agreement between NLP & humans  
+    - What might scalable, personalized feedback look like anyway?   
+
+### Spoilers?!
+>- Results suggest...
+>- Instructor agreement ($\text{QWK} \approx 0.7 \text{ to } 0.8+$)  
+>- UTA agreement ($\text{QWK} \approx 0.6 \text{ to } 0.7+$)  
+>- NLP algorithm agreement with instructors ($\text{QWK} \approx 0.7+$)  
+>- Human-Algorithm partnership may be even better? ($\approx 0.85+$)  
+>- Pursuing multiple avenues for grouping & feedback  
 
 
 
@@ -468,7 +470,6 @@ How similar is feedback provided by trained humans?
 
 
 \titlepage
-
 
 
 
