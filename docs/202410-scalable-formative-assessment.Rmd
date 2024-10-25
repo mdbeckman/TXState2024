@@ -236,7 +236,7 @@ Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transform
 
 
 
-# Meet the "machine": NLP for Educational Use
+# Meet the "machine": NLP for Assessment
 
 - Natural language processing (NLP) involves how computers can be programmed to analyze language elements
 - NLP-assisted feedback for educational use:
@@ -259,7 +259,7 @@ Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transform
 
 # Meet the "machine": SFRN Schematic
 
-![SFRN schematic: encoder (Left); fusion function (Middle); classifier (Right).](SFRN.png){width=70%}
+![encoder (Left); fusion function (Middle); classifier (Right).](SFRN.png){width=70%}
 
 Semantic Feature-Wide Transformation Relation Network (SFRN):
 
