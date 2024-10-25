@@ -306,6 +306,18 @@ Semantic Feature-Wide Transformation Relation Network (SFRN):
 Reliability intuition: moderate < 0.6 < substantial < 0.8 < near perfect < 1.0
 
 
+# Human-Machine Partnership?
+
+```{r, echo=FALSE,out.width="49%", out.height="49%", fig.cap="Illustration adapted from Google Photos", fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("GooglePhotos.png","GooglePhotoDeferral.png"))
+```
+
+
+Our approach to human-in-the-loop (HIL) did not make a recommendation (e.g., Left), it just shows examples to the human when it needs help (e.g., Right).
+
+
+
+
 # Human-Machine Partnership Method
 
 Want to evaluate accuracy of marking algorithm when designed to "defer" to human judgment
@@ -316,6 +328,8 @@ Want to evaluate accuracy of marking algorithm when designed to "defer" to human
 - interests
     - estimate how frequently the algorithm defers
     - estimate accuracy of the combined process
+
+
 
 # Human-Machine Partnership Results
 
@@ -513,18 +527,5 @@ How similar is feedback provided by trained humans?
 <!-- ![The $g_{\theta}MLP$ function (Left) uses an encoder to compute the relation vector for each [Q,R,A] triple. A -->
 <!-- set of relation vectors is combined (+) using a fusion function (*SFT*). The $f_{\phi}MLP$ function is the classifier step.](SFRN.png){width=70%} -->
 
-
-
-
-# Google Photos Illustration
-
-![](GooglePhotos.jpeg)
-
-
-# Google Photos "Deferral"
-
-![](GooglePhotoDeferral.jpeg)
-
-Our approach to HIL would likely not make a recommendation to the human, just basically request help.
 
 
