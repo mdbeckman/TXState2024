@@ -234,20 +234,41 @@ Reliability intuition: moderate < 0.6 < substantial < 0.8 < near perfect < 1.0
 
 Li, Z., Tomar, Y., & Passonneau, R. J. (2021). A Semantic Feature-Wise Transformation Relation Network for Automatic Short Answer Grading. In *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing*, pp. 6030–6040. Association for Computational Linguistics. <https://aclanthology.org/2021.emnlp-main.487>
 
-# Meet the "machine"
 
-![SFRN schematic: encoder (Left); fusion function (Middle); classifier (Right)](SFRN.png){width=70%}
+
+# Meet the "machine": NLP for Educational Use
+
+- Natural language processing (NLP) involves how computers can be programmed to analyze language elements
+- NLP-assisted feedback for educational use:
+    - automated short-answer grading (ASAG) from 2009
+    - essays & long-answer tasks earlier
+- Human-machine collaboration is a promising mechanism to assist rapid, individualized feedback at scale (Basu, 2013)
+- Deep neural networks application since 2016
+- Relational (neural) networks
+
+
+
+# Meet the "machine": Relational Networks
+
+![Image credit: Becky Passonneau](RelationalNetwork_RJP.png)
+
+- much of the architecture inspired by work from computer vision   
+- more efficient than transformer networks (e.g., LLMs)  
+
+
+
+# Meet the "machine": SFRN Schematic
+
+![SFRN schematic: encoder (Left); fusion function (Middle); classifier (Right).](SFRN.png){width=70%}
 
 Semantic Feature-Wide Transformation Relation Network (SFRN):
 
 - end-to-end model with three components:
-    - pretrained BERT encoder (LLM) >> vector representations
-    - learned feature-wise transformation function fuses multiple representations, if necessary (e.g., multiple reference answers)
+    - ($g_{\theta}MLP$) pretrained BERT encoder (LLM) >> vector representations
+    - (+) learned feature-wise transformation function fuses multiple representations, if necessary (e.g., multiple reference answers)
+    - ($f_{\phi}MLP$) is a classifier algorithm, i.e., neural network
 - relation networks designed to learn generalizations that infer meaning in a data-efficient way
 - data augmentation during training step
-- much of the architecture inspired by work from computer vision
-
-<!-- (akin to computer vision) -->
 
 
 
@@ -479,41 +500,18 @@ How similar is feedback provided by trained humans?
 \titlepage
 
 
+<!-- # SFRN Detail (Li et al., 2021) -->
 
+<!-- \small -->
 
-# NLP for Educational Use
+<!-- SFRN is an end-to-end model with 3 components: -->
 
-- Natural language processing (NLP) involves how computers can be programmed to analyze language elements
-- NLP-assisted feedback for educational use:
-    - automated short-answer grading (ASAG) from 2009
-    - essays & long-answer tasks earlier
-- Human-machine collaboration is a promising mechanism to assist rapid, individualized feedback at scale (Basu, 2013)
-- Deep neural networks application since 2016
-- Relational (neural) networks
+<!-- 1. encode QRA triples producing vector representations for question (Q), a possible reference (R), and student answer (A) -->
+<!-- 2. when relation network includes multiple QRA triples, a learned feature-wise transformation network merges all relation vectors for a student answer into a single relation vector by leveraging attentions calculated by a QRA triple; -->
+<!-- 3. the resulting vector representation is passed as an input to a classifier (i.e., neural network) -->
 
-
-<!-- - from Becky: -->
-<!-- - previously developed for computer vision -->
-<!-- - more efficient than transformer networks (e.g., LLMs) -->
-
-
-# Credit: Becky Passonneau
-
-![](RelationalNetwork_RJP.png)
-
-
-# SFRN Detail (Li et al., 2021)
-
-\small
-
-SFRN is an end-to-end model with 3 components:
-
-1. encode QRA triples producing vector representations for question (Q), a possible reference (R), and student answer (A)
-2. when relation network includes multiple QRA triples, a learned feature-wise transformation network merges all relation vectors for a student answer into a single relation vector by leveraging attentions calculated by a QRA triple;
-3. the resulting vector representation is passed as an input to a classifier (i.e., neural network)
-
-![The $g_{\theta}MLP$ function computes the relation vector for each [Q,R,A] triple. A
-set of relation vectors is combined (+) using *SFT*. The $f_{\phi}MLP$ function is the assessment classifier.](SFRN.png){width=70%}
+<!-- ![The $g_{\theta}MLP$ function (Left) uses an encoder to compute the relation vector for each [Q,R,A] triple. A -->
+<!-- set of relation vectors is combined (+) using a fusion function (*SFT*). The $f_{\phi}MLP$ function is the classifier step.](SFRN.png){width=70%} -->
 
 
 
