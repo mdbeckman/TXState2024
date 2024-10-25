@@ -116,7 +116,7 @@ knitr::include_graphics(c("OddForm.png","EvenForm.png"))
 ![Beckman et al., (2024) Project Team](SU24_Team.png){width=80%}
 
 
-# Attention Check...
+# Spoiler Alert
 
 - "short-answer" tasks are good for students, but hard to scale
 - Can NLP tools help instructors give students feedback?
