@@ -116,7 +116,7 @@ knitr::include_graphics(c("OddForm.png","EvenForm.png"))
 ![Beckman et al., (2024) Project Team](SU24_Team.png){width=80%}
 
 
-# Spoiler Alert
+# Some results before the methods
 
 - "short-answer" tasks are good for students, but hard to scale
 - Can NLP tools help instructors give students feedback?
@@ -124,7 +124,7 @@ knitr::include_graphics(c("OddForm.png","EvenForm.png"))
     - Compare agreement between NLP & humans
     - What might scalable, personalized feedback look like anyway?
 
-### Spoilers?!
+### (Spoiler Alert)
 >- Results suggest...
 >- Instructor agreement ($\text{QWK} \approx 0.7 \text{ to } 0.8+$)
 >- UTA agreement ($\text{QWK} \approx 0.6 \text{ to } 0.7+$)
